@@ -1,20 +1,28 @@
 <template>
   <div id="app">
     <Vheader></Vheader>
-    <div class="banner-wrapper">
-      <Vbanner></Vbanner>
-    </div>
-    <div class="recommend-wrapper border-1px">
-      <recommend></recommend>
-    </div>
-    <div class="course-exhibit-block-wrapper border-1px" v-for="item in 3">
-      <course-exhibit-block></course-exhibit-block>
-    </div>
-    <Vfooter></Vfooter>
+    <el-row class="banner-wrapper">
+      <el-col :lg="{span: 20, offset: 2}">
+        <Vbanner></Vbanner>
+      </el-col>
+    </el-row>
+    <el-row>
+      <el-col :lg="{span: 20, offset: 2}" class="recommend-wrapper border-1px">
+        <recommend></recommend>
+      </el-col>
+    </el-row>
+    <el-row>
+      <el-col :lg="{span: 20, offset: 2}" class="course-exhibit-block-wrapper border-1px" v-for="item in 3">
+        <course-exhibit-block></course-exhibit-block>
+      </el-col>
+    </el-row>
+    <el-row>
+      <el-col :span="24">
+        <Vfooter></Vfooter>
+      </el-col>
+    </el-row>
   </div>
 </template>
-
-
 
 <script type="text/ecmascript-6">
 import header from 'components/header/header'
@@ -42,15 +50,12 @@ export default {
 @import 'common/stylus/mixin'
 #app
   .banner-wrapper
-    padding 20px 0
-    background-color #fff
+    margin-bottom 20px
+    background-color #68a6e2
   .recommend-wrapper
-    display flex
-    justify-content center
+    padding 0 10px
     border-1px(rgba(7, 17, 27, 0.1))
   .course-exhibit-block-wrapper
-    display flex
-    justify-content center
-    padding 25px 0
+    padding 25px 10px
     border-1px(rgba(7, 17, 27, 0.1))
 </style>

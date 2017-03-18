@@ -1,6 +1,6 @@
 <template>
   <div class="courseExhibitBlock">
-    <el-row>
+    <el-row :gutter="20">
       <el-col :span="6">
         <el-card class="sort-block" :style="{ backgroundImage: 'url(\''+ imgObj.sortImgURL +'\')' }">
           <div class="mask">
@@ -13,16 +13,29 @@
         </el-card>
       </el-col>
       <el-col :span="18" class="section-wrapper">
-        <el-card :body-style="{ padding: '0px' }" class="section" v-for="(item, index) in imgObj.sectionImgURL">
-          <img :src="item" alt="" class="main">
-          <div class="info">
-            <h3 class="title">{{'案例' + (index + 1)}}</h3>
-          </div>
-        </el-card>
+        <el-row :gutter="20">
+          <el-col :span="8" v-for="(item, index) in preThreeImgObj">
+            <el-card :body-style="{ padding: '0px' }" class="section">
+              <img :src="item" alt="" class="img-responsive">
+              <div class="info">
+                <h3 class="title">{{'案例' + (index + 1)}}</h3>
+              </div>
+            </el-card>
+          </el-col>
+          <el-col :span="8" v-for="(item, index) in lastThreeImgObj">
+            <el-card :body-style="{ padding: '0px' }" class="section">
+              <img :src="item" alt="" class="img-responsive">
+              <div class="info">
+                <h3 class="title">{{'案例' + (index + 4)}}</h3>
+              </div>
+            </el-card>
+          </el-col>
+        </el-row>
       </el-col>
     </el-row>
   </div>
 </template>
+
 
 
 
@@ -42,20 +55,27 @@ export default {
         ]
       }
     }
+  },
+  computed: {
+    preThreeImgObj: function() {
+      return this.imgObj['sectionImgURL'].slice(0, 3)
+    },
+    lastThreeImgObj: function() {
+      return this.imgObj['sectionImgURL'].slice(3, 6)
+    }
   }
 }
+
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus">
-// @import 'common/stylus/mixin'
 .courseExhibitBlock
-  max-width 1200px
   font-size 0
   .sort-block
     display inline-block
     position relative
     height 420px
-    width 236px
+    width 100%
     .mask
       position absolute
       box-sizing border-box
@@ -76,15 +96,12 @@ export default {
         margin-top 14px
         font-size 14px
   .section-wrapper
-    display flex
-    justify-content space-around
-    flex-wrap wrap
     .section
       display inline-block
       flex 0 0 236px
       margin-bottom 15px
       vertical-align top
-      width 236px
+      width 100%
       height 200px
       background-color #fafafa
       .title

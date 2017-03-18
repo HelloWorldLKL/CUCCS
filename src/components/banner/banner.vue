@@ -30,7 +30,7 @@ export default {
   data() {
     return {
       imgGroup: [
-        'http://pic.90sjimg.com/back_pic/qk/back_origin_pic/00/02/35/97f962405ee52ef933367dd7ba597522.jpg',
+        'http://nos.netease.com/edu-image/84699488-f71b-4978-a647-43e9647230c5.jpg?imageView&quality=100',
         'http://pic.90sjimg.com/back_pic/qk/back_origin_pic/00/03/67/f76fceef54998a40f99bde5a1a96138a.jpg',
         'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1489763187839&di=fb6683c0457b77c5333c5048cfd862f8&imgtype=0&src=http%3A%2F%2Fpic.90sjimg.com%2Fback_pic%2F00%2F00%2F69%2F40%2F2f98a6cd604d1e03c9ec4d07db019ff0.jpg',
         'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1489763187827&di=374664155fe6b8e9756de3d90c0a1b57&imgtype=0&src=http%3A%2F%2Fpic.90sjimg.com%2Fback_pic%2F00%2F00%2F69%2F40%2F4324f2b8eefad86d6270442846108661.jpg',
