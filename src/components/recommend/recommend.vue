@@ -1,0 +1,71 @@
+<template>
+  <div class="recommend">
+    <h1 class="title">&nbsp;&nbsp;&nbsp;推荐课程</h1>
+    <div class="card-box">
+      <div class="card-wrapper" v-for="(o, index) in 4">
+        <el-card :body-style="{ padding: '0px' }">
+          <img src="http://nos.netease.com/edu-image/b2c48967-d570-4cd2-a326-cc68c69aef2c.jpg?imageView&quality=100" class="card-image">
+          <div class="info">
+            <span class="title">西方经济学</span>
+            <span class="section-count">案例数量： 500</span>
+            <p class="more-info">
+            	概述: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt culpa cum labore laudantium. Cum esse veritatis, cumque laborum, ex dolorem quo eius nobis ducimus tenetur similique. Asperiores iste illum unde.
+            </p>
+          </div>
+        </el-card>
+      </div>
+    </div>
+  </div>
+</template>
+
+
+
+<script type="text/ecmascript-6">
+export default {
+  data() {
+    return {
+    }
+  }
+}
+
+</script>
+
+<style lang="stylus" rel="stylesheet/stylus" scoped>
+.recommend
+	height 421px
+	width 1200px
+	padding 60px 0px
+	box-sizing border-box
+	.title
+		display inline-block
+		width 100%
+		margin-bottom 20px
+		font-size 24px
+		line-height 31px
+		color #111111
+		vertical-align middle
+	.card-box
+		display flex
+		justify-content space-between
+		.card-wrapper
+			flex 0 0 236px
+			width 236px
+			.card-image
+				width 236px
+				height 136px
+			.info
+				overflow: hidden
+				padding 10px
+				.title
+					font-size 14px
+				.section-count
+					font-size 12px
+					color #55B929
+				.more-info
+					margin-top 10px
+					font-size 13px
+					color rgb(153, 153, 153)
+					white-space nowrap
+					overflow hidden
+					text-overflow ellipsis
+</style>
