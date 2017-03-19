@@ -4,27 +4,27 @@
       <el-col :span="6">
         <el-card class="sort-block" :style="{ backgroundImage: 'url(\''+ imgObj.sortImgURL +'\')' }">
           <div class="mask">
-            <h3 class="title">西方经济学</h3>
-            <span class="section-count">案例数量： 500</span>
+            <h3 class="title">{{course.name}}</h3>
+            <span class="section-count">案例数量：{{course.section.length}}</span>
             <p class="more-info">
-              概述：Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis accusantium optio molestiae vitae, eligendi esse, quis non quam ex nulla consequuntur, vero libero voluptatum. Quam sint nostrum voluptates modi ab?
+              概述：{{course.info}}
             </p>
           </div>
         </el-card>
       </el-col>
       <el-col :span="18" class="section-wrapper">
-        <el-row :gutter="20">
-          <el-col :span="8" v-for="(item, index) in preThreeImgObj">
+        <el-row :gutter="20" v-if="course.section">
+          <el-col :span="8" v-for="(item, index) in course.section.slice(0, 3)">
             <el-card :body-style="{ padding: '0px' }" class="section">
-              <img :src="item" alt="" class="img-responsive">
+              <img :src="item.cover" alt="" class="img-responsive">
               <div class="info">
                 <h3 class="title">{{'案例' + (index + 1)}}</h3>
               </div>
             </el-card>
           </el-col>
-          <el-col :span="8" v-for="(item, index) in lastThreeImgObj">
+          <el-col :span="8" v-for="(item, index) in course.section.slice(3, 6)">
             <el-card :body-style="{ padding: '0px' }" class="section">
-              <img :src="item" alt="" class="img-responsive">
+              <img :src="item.cover" alt="" class="img-responsive">
               <div class="info">
                 <h3 class="title">{{'案例' + (index + 4)}}</h3>
               </div>
@@ -41,6 +41,11 @@
 
 <script type="text/ecmascript-6">
 export default {
+  props: {
+    course: {
+      type: Object
+    }
+  },
   data() {
     return {
       imgObj: {
@@ -54,14 +59,6 @@ export default {
           'http://edu-image.nosdn.127.net/10739F4FF8BA80568B4B160FEF82DDE7.jpg?imageView&thumbnail=235y135&quality=100'
         ]
       }
-    }
-  },
-  computed: {
-    preThreeImgObj: function() {
-      return this.imgObj['sectionImgURL'].slice(0, 3)
-    },
-    lastThreeImgObj: function() {
-      return this.imgObj['sectionImgURL'].slice(3, 6)
     }
   }
 }

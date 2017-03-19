@@ -2,18 +2,18 @@
   <div id="app">
     <Vheader></Vheader>
     <el-row class="banner-wrapper">
-      <el-col :lg="{span: 20, offset: 2}">
-        <Vbanner></Vbanner>
+      <el-col :span="24">
+        <Vbanner v-if="carousel" :carousel="carousel"></Vbanner>
       </el-col>
     </el-row>
     <el-row>
       <el-col :lg="{span: 20, offset: 2}" class="recommend-wrapper border-1px">
-        <recommend></recommend>
+        <recommend v-if="courses" :courses="courses"></recommend>
       </el-col>
     </el-row>
-    <el-row>
-      <el-col :lg="{span: 20, offset: 2}" class="course-exhibit-block-wrapper border-1px" v-for="item in 3">
-        <course-exhibit-block></course-exhibit-block>
+    <el-row v-if="courses">
+      <el-col :lg="{span: 20, offset: 2}" class="course-exhibit-block-wrapper border-1px" v-for="course in courses.slice(0,3)">
+        <course-exhibit-block v-if="course" :course="course"></course-exhibit-block>
       </el-col>
     </el-row>
     <el-row>
@@ -30,6 +30,9 @@ import banner from 'components/banner/banner'
 import recommend from 'components/recommend/recommend'
 import courseExhibitBlock from 'components/courseExhibitBlock/courseExhibitBlock'
 import footer from 'components/footer/footer'
+
+const ERR_OK = 0
+
 export default {
   components: {
     'Vheader': header,
@@ -40,8 +43,25 @@ export default {
   },
   data() {
     return {
-      data: 'HELLO'
+      courses: undefined,
+      carousel: undefined
     }
+  },
+  created() {
+    this.$http.get('/api/courses').then((response) => {
+      response = response.data
+      if (response.errno === ERR_OK) {
+        this.courses = response.data
+        console.log(this.courses)
+      }
+    })
+    this.$http.get('/api/carousel').then((response) => {
+      response = response.data
+      if (response.errno === ERR_OK) {
+        this.carousel = response.data
+        console.log(this.carousel)
+      }
+    })
   }
 }
 </script>
@@ -51,9 +71,8 @@ export default {
 #app
   .banner-wrapper
     margin-bottom 20px
-    background-color #68a6e2
   .recommend-wrapper
-    padding 0 10px
+    padding 0 10px 25px 10px
     border-1px(rgba(7, 17, 27, 0.1))
   .course-exhibit-block-wrapper
     padding 25px 10px

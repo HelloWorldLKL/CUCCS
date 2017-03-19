@@ -1,0 +1,398 @@
+{
+	"carousel": [
+		{
+			"img": "http://nos.netease.com/edu-image/d6c4a5e0-c4f7-49df-96a0-083263e6ccb6.jpg?imageView&quality=100",
+			"color": "#a06835"
+		},
+		{
+			"img": "http://nos.netease.com/edu-image/84699488-f71b-4978-a647-43e9647230c5.jpg?imageView&quality=100",
+			"color": "#68a6e2"
+		},
+		{
+			"img": "http://nos.netease.com/edu-image/0157ddc2-b61c-4fbb-8bc1-42f333ead212.jpg?imageView&quality=100",
+			"color": "#56bfbb"
+		},
+		{
+			"img": "http://nos.netease.com/edu-image/94ae7db2-788a-46ba-86d7-80995dd6562f.jpg?imageView&quality=100",
+			"color": "#e0e0e0"
+		},
+		{
+			"img": "http://edu-image.nosdn.127.net/3f0fcbda-a1cd-436e-915c-f66a97412e2e.jpg?imageView&quality=100",
+			"color": "#e9e9dd"
+		}
+	],
+	"courses": [
+		{
+			"name": "西方经济学",
+			"info": "面向经济学人才",
+			"cover": "http://edu-image.nosdn.127.net/99C6ADA8E982358B62CC22481673B131.jpg?imageView&thumbnail=426y240&quality=100",
+			"type": "经济管理",
+			"section": [
+				{
+					"name": "1234566",
+					"cover": "http://edu-image.nosdn.127.net/10739F4FF8BA80568B4B160FEF82DDE7.jpg?imageView&thumbnail=235y135&quality=100"
+				},
+				{
+					"name": "1234566",
+					"cover": "http://edu-image.nosdn.127.net/10739F4FF8BA80568B4B160FEF82DDE7.jpg?imageView&thumbnail=235y135&quality=100"
+				},
+				{
+					"name": "1234566",
+					"cover": "http://edu-image.nosdn.127.net/10739F4FF8BA80568B4B160FEF82DDE7.jpg?imageView&thumbnail=235y135&quality=100"
+				},
+				{
+					"name": "1234566",
+					"cover": "http://edu-image.nosdn.127.net/10739F4FF8BA80568B4B160FEF82DDE7.jpg?imageView&thumbnail=235y135&quality=100"
+				},
+				{
+					"name": "1234566",
+					"cover": "http://edu-image.nosdn.127.net/10739F4FF8BA80568B4B160FEF82DDE7.jpg?imageView&thumbnail=235y135&quality=100"
+				},
+				{
+					"name": "1234566",
+					"cover": "http://edu-image.nosdn.127.net/10739F4FF8BA80568B4B160FEF82DDE7.jpg?imageView&thumbnail=235y135&quality=100"
+				},
+				{
+					"name": "1234566",
+					"cover": "http://edu-image.nosdn.127.net/10739F4FF8BA80568B4B160FEF82DDE7.jpg?imageView&thumbnail=235y135&quality=100"
+				},
+				{
+					"name": "1234566",
+					"cover": "http://edu-image.nosdn.127.net/10739F4FF8BA80568B4B160FEF82DDE7.jpg?imageView&thumbnail=235y135&quality=100"
+				},
+				{
+					"name": "1234566",
+					"cover": "http://edu-image.nosdn.127.net/10739F4FF8BA80568B4B160FEF82DDE7.jpg?imageView&thumbnail=235y135&quality=100"
+				},
+				{
+					"name": "1234566",
+					"cover": "http://edu-image.nosdn.127.net/10739F4FF8BA80568B4B160FEF82DDE7.jpg?imageView&thumbnail=235y135&quality=100"
+				},
+				{
+					"name": "1234566",
+					"cover": "http://edu-image.nosdn.127.net/10739F4FF8BA80568B4B160FEF82DDE7.jpg?imageView&thumbnail=235y135&quality=100"
+				},
+				{
+					"name": "1234566",
+					"cover": "http://edu-image.nosdn.127.net/10739F4FF8BA80568B4B160FEF82DDE7.jpg?imageView&thumbnail=235y135&quality=100"
+				},
+				{
+					"name": "1234566",
+					"cover": "http://edu-image.nosdn.127.net/10739F4FF8BA80568B4B160FEF82DDE7.jpg?imageView&thumbnail=235y135&quality=100"
+				},
+				{
+					"name": "1234566",
+					"cover": "http://edu-image.nosdn.127.net/10739F4FF8BA80568B4B160FEF82DDE7.jpg?imageView&thumbnail=235y135&quality=100"
+				},
+				{
+					"name": "1234566",
+					"cover": "http://edu-image.nosdn.127.net/10739F4FF8BA80568B4B160FEF82DDE7.jpg?imageView&thumbnail=235y135&quality=100"
+				},
+				{
+					"name": "1234566",
+					"cover": "http://edu-image.nosdn.127.net/10739F4FF8BA80568B4B160FEF82DDE7.jpg?imageView&thumbnail=235y135&quality=100"
+				},
+				{
+					"name": "1234566",
+					"cover": "http://edu-image.nosdn.127.net/10739F4FF8BA80568B4B160FEF82DDE7.jpg?imageView&thumbnail=235y135&quality=100"
+				},
+				{
+					"name": "1234566",
+					"cover": "http://edu-image.nosdn.127.net/10739F4FF8BA80568B4B160FEF82DDE7.jpg?imageView&thumbnail=235y135&quality=100"
+				},
+				{
+					"name": "1234566",
+					"cover": "http://edu-image.nosdn.127.net/10739F4FF8BA80568B4B160FEF82DDE7.jpg?imageView&thumbnail=235y135&quality=100"
+				},
+				{
+					"name": "1234566",
+					"cover": "http://edu-image.nosdn.127.net/10739F4FF8BA80568B4B160FEF82DDE7.jpg?imageView&thumbnail=235y135&quality=100"
+				},
+				{
+					"name": "1234566",
+					"cover": "http://edu-image.nosdn.127.net/10739F4FF8BA80568B4B160FEF82DDE7.jpg?imageView&thumbnail=235y135&quality=100"
+				},
+				{
+					"name": "1234566",
+					"cover": "http://edu-image.nosdn.127.net/10739F4FF8BA80568B4B160FEF82DDE7.jpg?imageView&thumbnail=235y135&quality=100"
+				},
+				{
+					"name": "1234566",
+					"cover": "http://edu-image.nosdn.127.net/10739F4FF8BA80568B4B160FEF82DDE7.jpg?imageView&thumbnail=235y135&quality=100"
+				},
+				{
+					"name": "1234566",
+					"cover": "http://edu-image.nosdn.127.net/10739F4FF8BA80568B4B160FEF82DDE7.jpg?imageView&thumbnail=235y135&quality=100"
+				},
+				{
+					"name": "1234566",
+					"cover": "http://edu-image.nosdn.127.net/10739F4FF8BA80568B4B160FEF82DDE7.jpg?imageView&thumbnail=235y135&quality=100"
+				}
+			]
+		},
+		{
+			"name": "IT英语",
+			"info": "面向计算机人才",
+			"cover": "http://nos.netease.com/edu-image/b2c48967-d570-4cd2-a326-cc68c69aef2c.jpg?imageView&quality=100",
+			"type": "外语",
+			"section": [
+				{
+					"name": "1234566",
+					"cover": "http://edu-image.nosdn.127.net/10739F4FF8BA80568B4B160FEF82DDE7.jpg?imageView&thumbnail=235y135&quality=100"
+				},
+				{
+					"name": "1234566",
+					"cover": "http://edu-image.nosdn.127.net/10739F4FF8BA80568B4B160FEF82DDE7.jpg?imageView&thumbnail=235y135&quality=100"
+				},
+				{
+					"name": "1234566",
+					"cover": "http://edu-image.nosdn.127.net/10739F4FF8BA80568B4B160FEF82DDE7.jpg?imageView&thumbnail=235y135&quality=100"
+				},
+				{
+					"name": "1234566",
+					"cover": "http://edu-image.nosdn.127.net/10739F4FF8BA80568B4B160FEF82DDE7.jpg?imageView&thumbnail=235y135&quality=100"
+				},
+				{
+					"name": "1234566",
+					"cover": "http://edu-image.nosdn.127.net/10739F4FF8BA80568B4B160FEF82DDE7.jpg?imageView&thumbnail=235y135&quality=100"
+				},
+				{
+					"name": "1234566",
+					"cover": "http://edu-image.nosdn.127.net/10739F4FF8BA80568B4B160FEF82DDE7.jpg?imageView&thumbnail=235y135&quality=100"
+				},
+				{
+					"name": "1234566",
+					"cover": "http://edu-image.nosdn.127.net/10739F4FF8BA80568B4B160FEF82DDE7.jpg?imageView&thumbnail=235y135&quality=100"
+				},
+				{
+					"name": "1234566",
+					"cover": "http://edu-image.nosdn.127.net/10739F4FF8BA80568B4B160FEF82DDE7.jpg?imageView&thumbnail=235y135&quality=100"
+				},
+				{
+					"name": "1234566",
+					"cover": "http://edu-image.nosdn.127.net/10739F4FF8BA80568B4B160FEF82DDE7.jpg?imageView&thumbnail=235y135&quality=100"
+				}
+			]
+		},
+		{
+			"name": "世界历史",
+			"info": "非常有趣",
+			"cover": "http://nos.netease.com/edu-image/1595cff9-b41c-4189-bacf-e548d7790f30.jpg?imageView&quality=100",
+			"type": "文学历史",
+			"section": [
+				{
+					"name": "1234566",
+					"cover": "http://edu-image.nosdn.127.net/10739F4FF8BA80568B4B160FEF82DDE7.jpg?imageView&thumbnail=235y135&quality=100"
+				},
+				{
+					"name": "1234566",
+					"cover": "http://edu-image.nosdn.127.net/10739F4FF8BA80568B4B160FEF82DDE7.jpg?imageView&thumbnail=235y135&quality=100"
+				},
+				{
+					"name": "1234566",
+					"cover": "http://edu-image.nosdn.127.net/10739F4FF8BA80568B4B160FEF82DDE7.jpg?imageView&thumbnail=235y135&quality=100"
+				},
+				{
+					"name": "1234566",
+					"cover": "http://edu-image.nosdn.127.net/10739F4FF8BA80568B4B160FEF82DDE7.jpg?imageView&thumbnail=235y135&quality=100"
+				},
+				{
+					"name": "1234566",
+					"cover": "http://edu-image.nosdn.127.net/10739F4FF8BA80568B4B160FEF82DDE7.jpg?imageView&thumbnail=235y135&quality=100"
+				},
+				{
+					"name": "1234566",
+					"cover": "http://edu-image.nosdn.127.net/10739F4FF8BA80568B4B160FEF82DDE7.jpg?imageView&thumbnail=235y135&quality=100"
+				},
+				{
+					"name": "1234566",
+					"cover": "http://edu-image.nosdn.127.net/10739F4FF8BA80568B4B160FEF82DDE7.jpg?imageView&thumbnail=235y135&quality=100"
+				},
+				{
+					"name": "1234566",
+					"cover": "http://edu-image.nosdn.127.net/10739F4FF8BA80568B4B160FEF82DDE7.jpg?imageView&thumbnail=235y135&quality=100"
+				},
+				{
+					"name": "1234566",
+					"cover": "http://edu-image.nosdn.127.net/10739F4FF8BA80568B4B160FEF82DDE7.jpg?imageView&thumbnail=235y135&quality=100"
+				}
+			]
+		},
+		{
+			"name": "大学计算机",
+			"info": "专注于基础",
+			"cover": "http://img2.ph.126.net/_NtzwDtELhsjez62u8Gvbg==/2983071803279791004.png",
+			"type": "计算机",
+			"section": [
+				{
+					"name": "1234566",
+					"cover": "http://edu-image.nosdn.127.net/10739F4FF8BA80568B4B160FEF82DDE7.jpg?imageView&thumbnail=235y135&quality=100"
+				},
+				{
+					"name": "1234566",
+					"cover": "http://edu-image.nosdn.127.net/10739F4FF8BA80568B4B160FEF82DDE7.jpg?imageView&thumbnail=235y135&quality=100"
+				},
+				{
+					"name": "1234566",
+					"cover": "http://edu-image.nosdn.127.net/10739F4FF8BA80568B4B160FEF82DDE7.jpg?imageView&thumbnail=235y135&quality=100"
+				},
+				{
+					"name": "1234566",
+					"cover": "http://edu-image.nosdn.127.net/10739F4FF8BA80568B4B160FEF82DDE7.jpg?imageView&thumbnail=235y135&quality=100"
+				},
+				{
+					"name": "1234566",
+					"cover": "http://edu-image.nosdn.127.net/10739F4FF8BA80568B4B160FEF82DDE7.jpg?imageView&thumbnail=235y135&quality=100"
+				},
+				{
+					"name": "1234566",
+					"cover": "http://edu-image.nosdn.127.net/10739F4FF8BA80568B4B160FEF82DDE7.jpg?imageView&thumbnail=235y135&quality=100"
+				},
+				{
+					"name": "1234566",
+					"cover": "http://edu-image.nosdn.127.net/10739F4FF8BA80568B4B160FEF82DDE7.jpg?imageView&thumbnail=235y135&quality=100"
+				},
+				{
+					"name": "1234566",
+					"cover": "http://edu-image.nosdn.127.net/10739F4FF8BA80568B4B160FEF82DDE7.jpg?imageView&thumbnail=235y135&quality=100"
+				},
+				{
+					"name": "1234566",
+					"cover": "http://edu-image.nosdn.127.net/10739F4FF8BA80568B4B160FEF82DDE7.jpg?imageView&thumbnail=235y135&quality=100"
+				}
+			]
+		},
+		{
+			"name": "管理运筹学",
+			"info": "非常有用",
+			"cover": "http://edu-image.nosdn.127.net/B530470181CDDCF72FCED218C0338D86.jpeg?imageView&thumbnail=235y135&quality=100",
+			"type": "经济管理",
+			"section": [
+				{
+					"name": "1234566",
+					"cover": "http://edu-image.nosdn.127.net/10739F4FF8BA80568B4B160FEF82DDE7.jpg?imageView&thumbnail=235y135&quality=100"
+				},
+				{
+					"name": "1234566",
+					"cover": "http://edu-image.nosdn.127.net/10739F4FF8BA80568B4B160FEF82DDE7.jpg?imageView&thumbnail=235y135&quality=100"
+				},
+				{
+					"name": "1234566",
+					"cover": "http://edu-image.nosdn.127.net/10739F4FF8BA80568B4B160FEF82DDE7.jpg?imageView&thumbnail=235y135&quality=100"
+				},
+				{
+					"name": "1234566",
+					"cover": "http://edu-image.nosdn.127.net/10739F4FF8BA80568B4B160FEF82DDE7.jpg?imageView&thumbnail=235y135&quality=100"
+				},
+				{
+					"name": "1234566",
+					"cover": "http://edu-image.nosdn.127.net/10739F4FF8BA80568B4B160FEF82DDE7.jpg?imageView&thumbnail=235y135&quality=100"
+				},
+				{
+					"name": "1234566",
+					"cover": "http://edu-image.nosdn.127.net/10739F4FF8BA80568B4B160FEF82DDE7.jpg?imageView&thumbnail=235y135&quality=100"
+				},
+				{
+					"name": "1234566",
+					"cover": "http://edu-image.nosdn.127.net/10739F4FF8BA80568B4B160FEF82DDE7.jpg?imageView&thumbnail=235y135&quality=100"
+				},
+				{
+					"name": "1234566",
+					"cover": "http://edu-image.nosdn.127.net/10739F4FF8BA80568B4B160FEF82DDE7.jpg?imageView&thumbnail=235y135&quality=100"
+				},
+				{
+					"name": "1234566",
+					"cover": "http://edu-image.nosdn.127.net/10739F4FF8BA80568B4B160FEF82DDE7.jpg?imageView&thumbnail=235y135&quality=100"
+				}
+			]
+		},
+		{
+			"name": "电影鉴赏",
+			"info": "电影里的文学历史",
+			"cover": "http://edu-image.nosdn.127.net/D7329B6341AE9415D2D81B52733163A4.png?imageView&thumbnail=235y135&quality=100",
+			"type": "文学历史",
+			"section": [
+				{
+					"name": "1234566",
+					"cover": "http://edu-image.nosdn.127.net/10739F4FF8BA80568B4B160FEF82DDE7.jpg?imageView&thumbnail=235y135&quality=100"
+				},
+				{
+					"name": "1234566",
+					"cover": "http://edu-image.nosdn.127.net/10739F4FF8BA80568B4B160FEF82DDE7.jpg?imageView&thumbnail=235y135&quality=100"
+				},
+				{
+					"name": "1234566",
+					"cover": "http://edu-image.nosdn.127.net/10739F4FF8BA80568B4B160FEF82DDE7.jpg?imageView&thumbnail=235y135&quality=100"
+				},
+				{
+					"name": "1234566",
+					"cover": "http://edu-image.nosdn.127.net/10739F4FF8BA80568B4B160FEF82DDE7.jpg?imageView&thumbnail=235y135&quality=100"
+				},
+				{
+					"name": "1234566",
+					"cover": "http://edu-image.nosdn.127.net/10739F4FF8BA80568B4B160FEF82DDE7.jpg?imageView&thumbnail=235y135&quality=100"
+				},
+				{
+					"name": "1234566",
+					"cover": "http://edu-image.nosdn.127.net/10739F4FF8BA80568B4B160FEF82DDE7.jpg?imageView&thumbnail=235y135&quality=100"
+				},
+				{
+					"name": "1234566",
+					"cover": "http://edu-image.nosdn.127.net/10739F4FF8BA80568B4B160FEF82DDE7.jpg?imageView&thumbnail=235y135&quality=100"
+				},
+				{
+					"name": "1234566",
+					"cover": "http://edu-image.nosdn.127.net/10739F4FF8BA80568B4B160FEF82DDE7.jpg?imageView&thumbnail=235y135&quality=100"
+				},
+				{
+					"name": "1234566",
+					"cover": "http://edu-image.nosdn.127.net/10739F4FF8BA80568B4B160FEF82DDE7.jpg?imageView&thumbnail=235y135&quality=100"
+				}
+			]
+		},
+		{
+			"name": "单片机原理与应用",
+			"info": "不要担心～～",
+			"cover": "http://nos.netease.com/edu-image/9d50cbf3-da1f-42e3-9960-0e7701f4936f.jpg?imageView&quality=100",
+			"type": "计算机",
+			"section": [
+				{
+					"name": "1234566",
+					"cover": "http://edu-image.nosdn.127.net/10739F4FF8BA80568B4B160FEF82DDE7.jpg?imageView&thumbnail=235y135&quality=100"
+				},
+				{
+					"name": "1234566",
+					"cover": "http://edu-image.nosdn.127.net/10739F4FF8BA80568B4B160FEF82DDE7.jpg?imageView&thumbnail=235y135&quality=100"
+				},
+				{
+					"name": "1234566",
+					"cover": "http://edu-image.nosdn.127.net/10739F4FF8BA80568B4B160FEF82DDE7.jpg?imageView&thumbnail=235y135&quality=100"
+				},
+				{
+					"name": "1234566",
+					"cover": "http://edu-image.nosdn.127.net/10739F4FF8BA80568B4B160FEF82DDE7.jpg?imageView&thumbnail=235y135&quality=100"
+				},
+				{
+					"name": "1234566",
+					"cover": "http://edu-image.nosdn.127.net/10739F4FF8BA80568B4B160FEF82DDE7.jpg?imageView&thumbnail=235y135&quality=100"
+				},
+				{
+					"name": "1234566",
+					"cover": "http://edu-image.nosdn.127.net/10739F4FF8BA80568B4B160FEF82DDE7.jpg?imageView&thumbnail=235y135&quality=100"
+				},
+				{
+					"name": "1234566",
+					"cover": "http://edu-image.nosdn.127.net/10739F4FF8BA80568B4B160FEF82DDE7.jpg?imageView&thumbnail=235y135&quality=100"
+				},
+				{
+					"name": "1234566",
+					"cover": "http://edu-image.nosdn.127.net/10739F4FF8BA80568B4B160FEF82DDE7.jpg?imageView&thumbnail=235y135&quality=100"
+				},
+				{
+					"name": "1234566",
+					"cover": "http://edu-image.nosdn.127.net/10739F4FF8BA80568B4B160FEF82DDE7.jpg?imageView&thumbnail=235y135&quality=100"
+				}
+			]
+		}
+	]
+}

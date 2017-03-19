@@ -2,16 +2,16 @@
   <div class="recommend">
     <h1 class="title">推荐课程</h1>
     <el-row :gutter="10">
-      <el-col :span="4" v-for="(o, index) in 6">
+      <el-col :span="4" v-for="(item, index) in courses.slice(0, 6)">
       	<div class="card-box">
       	  <div class="card-wrapper">
       	    <el-card :body-style="{ padding: '0px' }">
-      	      <img src="http://nos.netease.com/edu-image/b2c48967-d570-4cd2-a326-cc68c69aef2c.jpg?imageView&quality=100" class="card-image">
+      	      <img :src="item.cover" class="card-image">
       	      <div class="info">
-      	        <span class="title">西方经济学</span>
-      	        <span class="section-count">案例数量： 500</span>
+      	        <span class="title">{{item.name}}</span>
+      	        <span class="section-count">案例数量：{{item.section.length}}</span>
       	        <p class="more-info">
-      	        	概述: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt culpa cum labore laudantium. Cum esse veritatis, cumque laborum, ex dolorem quo eius nobis ducimus tenetur similique. Asperiores iste illum unde.
+      	        	概述: {{item.info}}
       	        </p>
       	      </div>
       	    </el-card>
@@ -26,6 +26,11 @@
 
 <script type="text/ecmascript-6">
 export default {
+  props: {
+    courses: {
+      type: Array
+    }
+  },
   data() {
     return {
     }
@@ -50,6 +55,8 @@ export default {
 	.card-box
 		.card-wrapper
 			width 100%
+			.card-image
+				height 135px 
 			.info
 				overflow: hidden
 				padding 10px

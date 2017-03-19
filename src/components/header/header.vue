@@ -25,6 +25,8 @@
 
 
 <script type="text/ecmascript-6">
+const ERR_OK = 0
+
 export default {
   data() {
     return {
@@ -34,14 +36,18 @@ export default {
     }
   },
   methods: {
-    loadAllCourseData() {
-      return [
-        { 'value': '三全鲜食（北新泾店）', 'address': '长宁区新渔路144号' },
-        { 'value': 'Hot honey 首尔炸鸡（仙霞路）', 'address': '上海市长宁区淞虹路661号' },
-        { 'value': '新旺角茶餐厅', 'address': '上海市普陀区真北路988号创邑金沙谷6号楼113' },
-        { 'value': '泷千家(天山西路店)', 'address': '天山西路438号' },
-        { 'value': '胖仙女纸杯蛋糕（上海凌空店）', 'address': '上海市长宁区金钟路968号1幢18号楼一层商铺18-101' }
-      ]
+    loadAll() {
+      this.$http.get('/api/courses').then((response) => {
+        response = response.data
+        if (response.errno === ERR_OK) {
+          this.courses = response.data
+          for (let item of this.courses) {
+            let obj = {}
+            obj.value = item.name
+            this.courseData.push(obj)
+          }
+        }
+      })
     },
     querySearchAsync(queryString, cb) {
       var courseData = this.courseData
@@ -49,7 +55,7 @@ export default {
       clearTimeout(this.timeout)
       this.timeout = setTimeout(() => {
         cb(results)
-      }, 1500)
+      }, 3000 * Math.random())
     },
     createStateFilter(queryString) {
       return (state) => {
@@ -61,7 +67,7 @@ export default {
     }
   },
   mounted() {
-    this.courseData = this.loadAllCourseData()
+    this.loadAll()
   }
 }
 
