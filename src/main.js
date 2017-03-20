@@ -4,7 +4,7 @@ import Vue from 'vue'
 import axios from 'axios'
 import ElementUi from 'element-ui'
 import 'element-ui/lib/theme-default/index.css'
-import App from './App'
+import Index from './Index'
 
 import 'common/stylus/index.styl'
 
@@ -13,6 +13,6 @@ Vue.prototype.$http = axios
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
-  template: '<App/>',
-  components: { App }
+  template: '<Index/>',
+  components: { Index }
 })

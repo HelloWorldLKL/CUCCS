@@ -52,15 +52,19 @@ export default {
       response = response.data
       if (response.errno === ERR_OK) {
         this.courses = response.data
-        console.log(this.courses)
+        // console.log(this.courses)
       }
     })
     this.$http.get('/api/carousel').then((response) => {
       response = response.data
       if (response.errno === ERR_OK) {
         this.carousel = response.data
-        console.log(this.carousel)
+        // console.log(this.carousel)
       }
+    })
+    this.$http.get('http://localhost:3000/first').then((response) => {
+      response = response.data
+      console.log(response)
     })
   }
 }
