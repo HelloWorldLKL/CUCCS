@@ -47,6 +47,7 @@ export default {
       console.log(key, keyPath)
     },
     change(oldIndex, newIndex) {
+      console.log(newIndex)
       this.carouselIndex = newIndex
     }
   },

@@ -5,6 +5,10 @@ module.exports = {
   build: {
     env: require('./prod.env'),
     index: path.resolve(__dirname, '../dist/index.html'),
+    sort: path.resolve(__dirname, '../dist/sort.html'),
+    course: path.resolve(__dirname, '../dist/course.html'),
+    section: path.resolve(__dirname, '../dist/section.html'),
+    backer: path.resolve(__dirname, '../dist/backer.html'),
     assetsRoot: path.resolve(__dirname, '../dist'),
     assetsSubDirectory: 'static',
     assetsPublicPath: './',

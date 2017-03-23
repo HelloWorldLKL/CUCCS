@@ -28,7 +28,32 @@ module.exports = merge(baseWebpackConfig, {
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: 'index.html',
-      inject: true
+      inject: true,
+      chunks: ['app']
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'sort.html',
+      template: 'sort.html',
+      inject: true,
+      chunks: ['app2']
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'course.html',
+      template: 'course.html',
+      inject: true,
+      chunks: ['app3']
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'section.html',
+      template: 'section.html',
+      inject: true,
+      chunks: ['app4']
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'backer.html',
+      template: 'backer.html',
+      inject: true,
+      chunks: ['app5']
     }),
     new FriendlyErrorsPlugin()
   ]

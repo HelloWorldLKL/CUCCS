@@ -95,7 +95,6 @@ export default {
   .section-wrapper
     .section
       display inline-block
-      flex 0 0 236px
       margin-bottom 15px
       vertical-align top
       width 100%
