@@ -16,7 +16,6 @@
 
 <script type="text/ecmascript-6">
 import navbar from 'components/navbar/navbar'
-import courseExhibitBlock from 'components/courseExhibitBlock/courseExhibitBlock'
 import footer from 'components/footer/footer'
 
 const ERR_OK = 0
@@ -24,7 +23,6 @@ const ERR_OK = 0
 export default {
   components: {
     'navbar': navbar,
-    'course-exhibit-block': courseExhibitBlock,
     'Vfooter': footer
   },
   data() {

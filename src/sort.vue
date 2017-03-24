@@ -14,11 +14,7 @@
         <course-exhibit-block v-if="course" :course="course"></course-exhibit-block>
       </el-col>
     </el-row>
-    <el-row>
-      <el-col :span="24">
-        <Vfooter></Vfooter>
-      </el-col>
-    </el-row>
+    <Vfooter></Vfooter>
   </div>
 </template>
 

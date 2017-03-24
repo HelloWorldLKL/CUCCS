@@ -1,11 +1,9 @@
 <template>
   <div id="app">
     <Vheader></Vheader>
-    <el-row class="banner-wrapper">
-      <el-col :span="24">
-        <Vbanner v-if="carousel" :carousel="carousel"></Vbanner>
-      </el-col>
-    </el-row>
+    <div class="banner-wrapper" v-if="carousel">
+      <Vbanner :carousel="carousel"></Vbanner>
+    </div>
     <el-row>
       <el-col :lg="{span: 20, offset: 2}" class="recommend-wrapper border-1px">
         <recommend v-if="courses" :courses="courses"></recommend>
@@ -16,11 +14,7 @@
         <course-exhibit-block v-if="course" :course="course"></course-exhibit-block>
       </el-col>
     </el-row>
-    <el-row>
-      <el-col :span="24">
-        <Vfooter></Vfooter>
-      </el-col>
-    </el-row>
+    <Vfooter></Vfooter>
   </div>
 </template>
 

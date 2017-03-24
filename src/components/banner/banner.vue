@@ -1,5 +1,5 @@
 <template>
-  <el-row :style="{ backgroundColor : carousel[colorIndex].color}" class="color-banner-wrapper">
+  <el-row :style="{ backgroundColor : carousel[carouselIndex].color}" class="color-banner-wrapper">
     <el-col :lg="{span: 20, offset: 2}">
       <div class="banner">
         <el-row>
@@ -16,7 +16,7 @@
           </el-col>
           <el-col :span="20">
             <div class="carousel-wrapper">
-              <el-carousel @change="change" trigger="click" indicator-position="none">
+              <el-carousel @change="change" trigger="click">
                 <el-carousel-item v-for="item in carousel" :style="{ backgroundImage: 'url(\''+ item.img +'\')' }"></el-carousel-item>
               </el-carousel>
             </div>
@@ -46,17 +46,20 @@ export default {
     handleClose(key, keyPath) {
       console.log(key, keyPath)
     },
-    change(oldIndex, newIndex) {
-      console.log(newIndex)
-      this.carouselIndex = newIndex
-    }
-  },
-  computed: {
-    colorIndex() {
-      if (this.carouselIndex === this.carousel.length - 1) {
-        return 0
+    change(newIndex, oldIndex) {
+      if (oldIndex > newIndex) {
+        if (oldIndex === 4 && newIndex === 0) {
+          this.carouselIndex = 0
+          return
+        }
+        this.carouselIndex = newIndex
+      } else {
+        if (oldIndex === 0 && newIndex === 4) {
+          this.carouselIndex = 4
+          return
+        }
+        this.carouselIndex = newIndex
       }
-      return this.carouselIndex + 1
     }
   }
 }
