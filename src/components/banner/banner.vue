@@ -47,19 +47,15 @@ export default {
       console.log(key, keyPath)
     },
     change(newIndex, oldIndex) {
-      if (oldIndex > newIndex) {
-        if (oldIndex === 4 && newIndex === 0) {
-          this.carouselIndex = 0
-          return
-        }
-        this.carouselIndex = newIndex
-      } else {
-        if (oldIndex === 0 && newIndex === 4) {
-          this.carouselIndex = 4
-          return
-        }
-        this.carouselIndex = newIndex
+      if (oldIndex === this.carousel.length - 1 && newIndex === 0) {
+        this.carouselIndex = 0
+        return
       }
+      if (oldIndex === 0 && newIndex === this.carousel.length - 1) {
+        this.carouselIndex = 4
+        return
+      }
+      this.carouselIndex = newIndex
     }
   }
 }

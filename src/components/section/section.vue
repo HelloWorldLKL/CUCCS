@@ -1,8 +1,8 @@
 <template>
   <div class="section">
     <el-card :body-style="{ padding: '0px' }">
-      <img :src="sectionInfo.cover" alt="" class="img">
-      <div class="info">
+      <img :src="sectionInfo.cover" :height="imgHeight" alt="" class="img">
+      <div class="info" :style="{ height: infoHeight, 'line-height' : infoHeight }">
         <h3>{{sectionInfo.name}}</h3>
       </div>
     </el-card>
@@ -13,18 +13,25 @@ export default {
   props: {
     sectionInfo: {
       type: Object
+    },
+    infoHeight: {
+      type: String
+    },
+    imgHeight: {
+      type: String
     }
   },
   data() {
-    return {}
+    return {
+    }
   }
 }
 </script>
 <style lang="stylus" rel="stylesheet/stylus">
 .section
-	.img
-		height 136px
-		width 100%
-	.info
-		height 40px
+  .img
+    width 100%
+  .info
+    font-size 18px
+    text-align center
 </style>

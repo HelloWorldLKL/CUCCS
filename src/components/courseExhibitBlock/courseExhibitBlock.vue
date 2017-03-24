@@ -15,20 +15,10 @@
       <el-col :span="18" class="section-wrapper">
         <el-row :gutter="20" v-if="course.section">
           <el-col :span="8" v-for="(item, index) in course.section.slice(0, 3)">
-            <el-card :body-style="{ padding: '0px' }" class="section">
-              <img :src="item.cover" alt="" class="img-responsive">
-              <div class="info">
-                <h3 class="title">{{'案例' + (index + 1)}}</h3>
-              </div>
-            </el-card>
+            <Vsection :sectionInfo="item" infoHeight="50px" imgHeight="150px" class="section"></Vsection>
           </el-col>
           <el-col :span="8" v-for="(item, index) in course.section.slice(3, 6)">
-            <el-card :body-style="{ padding: '0px' }" class="section">
-              <img :src="item.cover" alt="" class="img-responsive">
-              <div class="info">
-                <h3 class="title">{{'案例' + (index + 4)}}</h3>
-              </div>
-            </el-card>
+            <Vsection :sectionInfo="item" infoHeight="50px" imgHeight="150px" class="section"></Vsection>
           </el-col>
         </el-row>
       </el-col>
@@ -40,11 +30,15 @@
 
 
 <script type="text/ecmascript-6">
+import section from 'components/section/section'
 export default {
   props: {
     course: {
       type: Object
     }
+  },
+  components: {
+    'Vsection': section
   },
   data() {
     return {
@@ -67,7 +61,6 @@ export default {
 
 <style lang="stylus" rel="stylesheet/stylus">
 .courseExhibitBlock
-  font-size 0
   .sort-block
     display inline-block
     position relative
@@ -99,11 +92,6 @@ export default {
       vertical-align top
       width 100%
       height 200px
-      background-color #fafafa
-      .title
-        margin-top 18px
-        font-size 18px
-        text-align center
     .section:nth-child(4)
       margin-bottom 0
     .section:nth-child(5)
