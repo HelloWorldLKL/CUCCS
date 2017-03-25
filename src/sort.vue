@@ -5,7 +5,7 @@
       <el-col :lg="{span: 20, offset: 2}">
         <el-breadcrumb separator="/" class="bread-crumb">
           <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
-          <el-breadcrumb-item>sort</el-breadcrumb-item>
+          <el-breadcrumb-item>全部课程</el-breadcrumb-item>
         </el-breadcrumb>
       </el-col>
     </el-row>
