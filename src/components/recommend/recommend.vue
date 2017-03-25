@@ -5,7 +5,7 @@
       <el-col :span="4" v-for="(item, index) in courses.slice(0, 6)">
       	<div class="card-box">
       	  <div class="card-wrapper">
-      	    <el-card :body-style="{ padding: '0px' }">
+      	    <div class="animate-shadow card">
       	      <img :src="item.cover" class="card-image">
       	      <div class="info">
       	        <span class="title">{{item.name}}</span>
@@ -14,7 +14,7 @@
       	        	概述: {{item.info}}
       	        </p>
       	      </div>
-      	    </el-card>
+      	    </div>
       	  </div>
       	</div>
       </el-col>
@@ -55,22 +55,26 @@ export default {
 	.card-box
 		.card-wrapper
 			width 100%
-			.card-image
-				height 135px 
-			.info
-				overflow: hidden
-				padding 10px
-				.title
-					font-size 14px
-					text-align center
-				.section-count
-					font-size 12px
-					color #55B929
-				.more-info
-					margin-top 10px
-					font-size 13px
-					color rgb(153, 153, 153)
-					white-space nowrap
-					overflow hidden
-					text-overflow ellipsis
+			.card
+				overflow hidden
+				border-radius 3px
+				background-color #fafafa
+				.card-image
+					height 135px 
+				.info
+					overflow: hidden
+					padding 10px
+					.title
+						font-size 14px
+						text-align center
+					.section-count
+						font-size 12px
+						color #55B929
+					.more-info
+						margin-top 10px
+						font-size 13px
+						color rgb(153, 153, 153)
+						white-space nowrap
+						overflow hidden
+						text-overflow ellipsis
 </style>
