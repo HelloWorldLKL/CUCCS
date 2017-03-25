@@ -2,7 +2,7 @@
   <div class="courseExhibitBlock">
     <el-row :gutter="20">
       <el-col :span="6">
-        <el-card class="sort-block" :style="{ backgroundImage: 'url(\''+ imgObj.sortImgURL +'\')' }">
+        <el-card class="sort-block" :style="{ backgroundImage: 'url(\''+ sortImgURL +'\')' }">
           <div class="mask">
             <h3 class="title">{{course.name}}</h3>
             <span class="section-count">案例数量：{{course.section.length}}</span>
@@ -42,21 +42,10 @@ export default {
   },
   data() {
     return {
-      imgObj: {
-        sortImgURL: 'http://edu-image.nosdn.127.net/D898E17016500A84930AF2FF06C9BF37.png?imageView&thumbnail=235y325&quality=100',
-        sectionImgURL: [
-          'http://edu-image.nosdn.127.net/10739F4FF8BA80568B4B160FEF82DDE7.jpg?imageView&thumbnail=235y135&quality=100',
-          'http://edu-image.nosdn.127.net/10739F4FF8BA80568B4B160FEF82DDE7.jpg?imageView&thumbnail=235y135&quality=100',
-          'http://edu-image.nosdn.127.net/10739F4FF8BA80568B4B160FEF82DDE7.jpg?imageView&thumbnail=235y135&quality=100',
-          'http://edu-image.nosdn.127.net/10739F4FF8BA80568B4B160FEF82DDE7.jpg?imageView&thumbnail=235y135&quality=100',
-          'http://edu-image.nosdn.127.net/10739F4FF8BA80568B4B160FEF82DDE7.jpg?imageView&thumbnail=235y135&quality=100',
-          'http://edu-image.nosdn.127.net/10739F4FF8BA80568B4B160FEF82DDE7.jpg?imageView&thumbnail=235y135&quality=100'
-        ]
-      }
+      sortImgURL: 'http://edu-image.nosdn.127.net/D898E17016500A84930AF2FF06C9BF37.png?imageView&thumbnail=235y325&quality=100'
     }
   }
 }
-
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus">
@@ -85,6 +74,7 @@ export default {
       .more-info
         margin-top 14px
         font-size 14px
+        line-height 20px
   .section-wrapper
     .section
       display inline-block

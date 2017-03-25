@@ -5,13 +5,13 @@
       <el-col :lg="{span: 20, offset: 2}">
         <el-card :body-style="{ padding: '0px' }">
           <el-col :span="14" class="course-info">
-            <h3 class="title">西方经济学</h3>
+            <h3 class="title">{{course.name}}</h3>
             <p class="info">
-              概述：Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse quo quibusdam qui cupiditate tempora porro, in maiores provident soluta voluptas, pariatur cum impedit, voluptate repellat magni sequi exercitationem doloremque commodi.
+              概述：{{course.info}}
             </p>
           </el-col>
           <el-col :span="10" class="course-cover">
-            <img src="http://imgsize.ph.126.net/?enlarge=true&imgurl=http://edu-image.nosdn.127.net/2FBF2643E1153A9C7CEA9F5D0B0CD3D6.jpg?imageView&thumbnail=426y240&quality=100_426x240x1x95.png" alt="">
+            <img :src="course.cover" alt="">
           </el-col>
         </el-card>
       </el-col>
@@ -76,7 +76,7 @@ export default {
     this.$http.get('/api/courses').then((response) => {
       response = response.data
       if (response.errno === ERR_OK) {
-        this.course = response.data[0]
+        this.course = response.data[1]
       }
     })
   }
@@ -99,6 +99,7 @@ export default {
 				font-size 30px
 			.info
 				font-size 23px
+				line-height 30px
 		.course-cover
 			img
 				width 100%
