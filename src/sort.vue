@@ -39,7 +39,14 @@ export default {
   },
   data() {
     return {
-      courses: undefined
+      courses: undefined,
+      currentPage: 1
+    }
+  },
+  methods: {
+    handleCurrentChange(val) {
+      this.currentPage = val
+      console.log(`当前页: ${val}`)
     }
   },
   created() {

@@ -66,6 +66,9 @@ export default {
 					padding 10px
 					.title
 						font-size 14px
+						white-space nowrap
+						overflow hidden
+						text-overflow ellipsis
 						text-align center
 					.section-count
 						font-size 12px

@@ -3,7 +3,7 @@
     <div class="animate-shadow card">
       <img :src="sectionInfo.cover" :height="imgHeight" alt="" class="img">
       <div class="info" :style="{ height: infoHeight, 'line-height' : infoHeight }">
-        <h3>{{sectionInfo.name}}</h3>
+        <span class="title">{{sectionInfo.name}}</span>
       </div>
     </div>
   </div>
@@ -29,13 +29,21 @@ export default {
 </script>
 <style lang="stylus" rel="stylesheet/stylus">
 .section
-	.card
-		overflow hidden
-		border-radius 3px
-		background-color #fafafa
+  .card
+	  overflow hidden
+	  border-radius 3px
+	  background-color #fafafa
 	  .img
-			width 100%
+	    width 100%
 	  .info
-			font-size 18px
-			text-align center
+	    padding 0 10px
+	    text-align center
+	    text-overflow ellipsis
+	    .title
+	    	display block
+		    font-size 18px
+		    white-space nowrap
+		    overflow hidden
+		    text-overflow ellipsis
+		    text-align center
 </style>

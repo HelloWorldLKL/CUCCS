@@ -69,6 +69,7 @@ export default {
         margin 60px 0 24px 0
         font-size 24px
         text-align center
+        line-height 28px
       .section-count
         font-size 12px
       .more-info

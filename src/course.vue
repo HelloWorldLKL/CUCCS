@@ -3,7 +3,7 @@
     <Vheader></Vheader>
     <el-row class="course-info-wrapper">
       <el-col :lg="{span: 20, offset: 2}">
-        <el-card :body-style="{ padding: '0px' }">
+        <el-card v-if="course" :body-style="{ padding: '0px' }">
           <el-col :span="14" class="course-info">
             <h3 class="title">{{course.name}}</h3>
             <p class="info">
@@ -92,14 +92,14 @@ export default {
 		font-size 0
 		.course-info
 			box-sizing border-box
-			padding 30px
+			padding 20px
 			.title
 				display inline-block
 				margin-bottom 20px
 				font-size 30px
 			.info
-				font-size 23px
-				line-height 30px
+				font-size 20px
+				line-height 23px      
 		.course-cover
 			img
 				width 100%

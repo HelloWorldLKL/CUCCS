@@ -1,7 +1,21 @@
 <template>
   <div id="app4">
     <Vheader></Vheader>
-
+    <div class="banner-wrapper" v-if="carousel">
+      <Vbanner :carousel="carousel"></Vbanner>
+    </div>
+    <el-row>
+      <el-col :lg="{span: 20, offset: 2}" class="recommend-wrapper border-1px">
+      	<el-col :span="20" class="pdf-viewer">
+      		<h1>This is PDF-VIEWER</h1>
+      	</el-col>
+      	<el-col :span="4" class="pdf-info">
+      		<p>
+      			摘要：Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque aliquam eligendi eius reiciendis minus magnam repellat nesciunt sed aspernatur numquam qui dignissimos maxime voluptatum similique eveniet minima consequatur, esse corporis.
+      		</p>
+      	</el-col>
+      </el-col>
+    </el-row>
     <Vfooter></Vfooter>
   </div>
 </template>
@@ -9,7 +23,7 @@
 
 <script type="text/ecmascript-6">
 import header from 'components/header/header'
-import section from 'components/section/section'
+import banner from 'components/banner/banner'
 import footer from 'components/footer/footer'
 
 const ERR_OK = 0
@@ -17,13 +31,12 @@ const ERR_OK = 0
 export default {
   components: {
     'Vheader': header,
-    'Vsection': section,
+    'Vbanner': banner,
     'Vfooter': footer
   },
   data() {
     return {
-      currentPage: 1,
-      course: undefined
+      carousel: undefined
     }
   },
   methods: {
@@ -33,11 +46,10 @@ export default {
     }
   },
   created() {
-    this.$http.get('/api/courses').then((response) => {
+    this.$http.get('/api/carousel').then((response) => {
       response = response.data
       if (response.errno === ERR_OK) {
-        this.course = response.data[0]
-        // console.log(this.courses)
+        this.carousel = response.data
       }
     })
   }
@@ -47,23 +59,6 @@ export default {
 <style lang="stylus" rel="stylesheet/stylus">
 @import 'common/stylus/mixin'
 #app4
-	.course-info-wrapper
-		margin 10px 0
-		padding 10px
-		.course-info
-			height 300px
-			color #F9FAFC
-			background-color #1D8CE0
-			.title
-				font-size 30px
-			.info
-				marign-top 20px
-				font-size 23px
-	.sections-wrapper
-		margin-top 20px
-		padding 10px
-		.section
-			margin 10px 0	
-	.pagination-wrapper
-		margin 30px 0
+	.banner-wrapper
+		margin-bottom 20px
 </style>
