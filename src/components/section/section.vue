@@ -1,11 +1,13 @@
 <template>
   <div class="section">
-    <div class="animate-shadow card">
-      <img :src="sectionInfo.cover" :height="imgHeight" alt="" class="img">
-      <div class="info" :style="{ height: infoHeight, 'line-height' : infoHeight }">
-        <span class="title">{{sectionInfo.name}}</span>
+    <a href="/section.html">
+      <div class="animate-shadow card">
+        <img :src="sectionInfo.cover" :height="imgHeight" alt="" class="img">
+        <div class="info" :style="{ height: infoHeight, 'line-height' : infoHeight }">
+          <span class="title">{{sectionInfo.name}}</span>
+        </div>
       </div>
-    </div>
+    </a>
   </div>
 </template>
 <script type="text/ecmascript-6">

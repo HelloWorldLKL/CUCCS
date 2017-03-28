@@ -3,20 +3,22 @@
     <h1 class="title">推荐课程</h1>
     <el-row :gutter="10">
       <el-col :span="4" v-for="(item, index) in courses.slice(0, 6)">
-      	<div class="card-box">
-      	  <div class="card-wrapper">
-      	    <div class="animate-shadow card">
-      	      <img :src="item.cover" class="card-image">
-      	      <div class="info">
-      	        <span class="title">{{item.name}}</span>
-      	        <span class="section-count">案例数量：{{item.section.length}}</span>
-      	        <p class="more-info">
-      	        	概述: {{item.info}}
-      	        </p>
-      	      </div>
-      	    </div>
-      	  </div>
-      	</div>
+      	<a href="/course.html">
+	      	<div class="card-box">
+	      	  <div class="card-wrapper">
+	      	    <div class="animate-shadow card">
+	      	      <img :src="item.cover" class="card-image">
+	      	      <div class="info">
+	      	        <span class="title">{{item.name}}</span>
+	      	        <span class="section-count">案例数量：{{item.section.length}}</span>
+	      	        <p class="more-info">
+	      	        	概述: {{item.info}}
+	      	        </p>
+	      	      </div>
+	      	    </div>
+	      	  </div>
+	      	</div>
+	      </a>
       </el-col>
     </el-row>
   </div>

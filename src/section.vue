@@ -7,7 +7,7 @@
     <el-row>
       <el-col :lg="{span: 20, offset: 2}" class="pdf-wrapper border-1px">
       	<el-col :span="18" class="pdf-viewer">
-      		<iframe src="static/web/viewer.html?file=helloworld.pdf" style="width:100%;height:100%;"> </iframe>
+      		<iframe src="static/web/viewer.html?file=test.pdf" style="width:100%;height:100%;"> </iframe>
       	</el-col>
       	<el-col :span="6" class="pdf-info">
       		<p>

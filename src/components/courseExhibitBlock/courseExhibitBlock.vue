@@ -2,15 +2,17 @@
   <div class="courseExhibitBlock">
     <el-row :gutter="20">
       <el-col :span="6">
-        <el-card class="sort-block" :style="{ backgroundImage: 'url(\''+ sortImgURL +'\')' }">
-          <div class="mask">
-            <h3 class="title">{{course.name}}</h3>
-            <span class="section-count">案例数量：{{course.section.length}}</span>
-            <p class="more-info">
-              概述：{{course.info}}
-            </p>
-          </div>
-        </el-card>
+        <a href="/course.html">
+          <el-card class="sort-block" :style="{ backgroundImage: 'url(\''+ sortImgURL +'\')' }">
+            <div class="mask">
+              <h3 class="title">{{course.name}}</h3>
+              <span class="section-count">案例数量：{{course.section.length}}</span>
+              <p class="more-info">
+                概述：{{course.info}}
+              </p>
+            </div>
+          </el-card>
+        </a>
       </el-col>
       <el-col :span="18" class="section-wrapper">
         <el-row :gutter="20" v-if="course.section">

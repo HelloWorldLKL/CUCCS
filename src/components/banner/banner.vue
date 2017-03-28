@@ -7,16 +7,16 @@
             <el-menu default-active="2" @open="handleOpen" @close="handleClose" theme="dark">
               <el-submenu index="1">
                 <template slot="title">计算机</template>
-                <el-menu-item index="1-1">数据库</el-menu-item>
-                <el-menu-item index="1-2">前端</el-menu-item>
+                <a href="/sort.html"><el-menu-item index="1-1">数据库</el-menu-item></a>
+                <a href="/sort.html"><el-menu-item index="1-2">前端</el-menu-item></a>
               </el-submenu>
-              <el-menu-item index="2">经济管理</el-menu-item>
-              <el-menu-item index="3">文化历史</el-menu-item>
-              <el-menu-item index="4">理学</el-menu-item>
-              <el-menu-item index="5">工学</el-menu-item>
-              <el-menu-item index="6">艺术设计</el-menu-item>
-              <el-menu-item index="7">外语</el-menu-item>
-              <el-menu-item index="8">其他</el-menu-item>
+              <a href="/sort.html"><el-menu-item index="2">经济管理</el-menu-item></a>
+              <a href="/sort.html"><el-menu-item index="3">文化历史</el-menu-item></a>
+              <a href="/sort.html"><el-menu-item index="4">理学</el-menu-item></a>
+              <a href="/sort.html"><el-menu-item index="5">工学</el-menu-item></a>
+              <a href="/sort.html"><el-menu-item index="6">艺术设计</el-menu-item></a>
+              <a href="/sort.html"><el-menu-item index="7">外语</el-menu-item></a>
+              <a href="/sort.html"><el-menu-item index="8">其他</el-menu-item></a>
             </el-menu>
           </el-col>
           <el-col :span="20">
