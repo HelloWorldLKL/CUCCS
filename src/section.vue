@@ -35,7 +35,7 @@
             <el-col :span="3"><i class="fa" :class="{'fa-heart': !heart, 'fa-heart-o': heart}" @click="switchHeart"></i></el-col>
           </el-row>
       		<p class="pdf-info shadow">
-      			摘要：Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque aliquam eligendi eius reiciendis minus magnam repellat nesciunt sed aspernatur numquam qui dignissimos maxime voluptatum similique eveniet minima consequatur, esse corporis.
+      			摘要：蔻驰公司，简称Coach、Coach公司以及蔻驰（英语：Coach Inc.，NYSE：COH、港交所：6388），在1941年，于美国纽约总部设立Gail Manufacturing Company。主要生产皮革、手袋、公文包、皮鞋等各类产品。由于2011年12月1日，在香港交易所主板上市，属于不涉及发行新股关系，加上以香港预托证券作第二上市，故此是以介绍形式上市作准则。其发行股数为2.93亿股。[1]另外，也是纽约证券交易所上市。现时销售香港、美国、日本、法国等国家。在台湾设立荷兰商蔻驰皮件股份有限公司台湾分公司 产品包括手袋，男、女装小皮具、公文袋、周末及旅行用配件、鞋履、配表、外套、丝巾、太阳眼镜、香氛、珠宝及其他相关配饰 在台员工数约为400人
       		</p>
       	</el-col>
       </el-col>
@@ -126,8 +126,9 @@ export default {
 		.pdf-info
 			box-sizing border-box
 			height 640px
-			padding 40px 10px
-			font-size 23px
-			text-align justify-all
+			padding 40px 20px
+			font-size 19px
+			line-height 23px
+			text-align justify
 			background-color #fafafa
 </style>
