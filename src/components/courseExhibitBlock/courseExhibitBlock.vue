@@ -68,16 +68,20 @@ export default {
       color #eee
       background-color rgba(29, 140, 224, .9)
       .title
-        margin 60px 0 24px 0
+        margin 60px 0 0 0
         font-size 24px
         text-align center
-        line-height 28px
+        line-height 25px
       .section-count
-        font-size 12px
+        display inline-block
+        padding 5px 10px
+        margin 10px 0
+        color #1F2D3D
+        background-color #fafafa
       .more-info
-        margin-top 14px
-        font-size 14px
-        line-height 20px
+        font-size 13px
+        font-weight lighter
+        line-height 25px
   .section-wrapper
     .section
       display inline-block

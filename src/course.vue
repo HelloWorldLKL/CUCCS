@@ -11,7 +11,7 @@
             </p>
           </el-col>
           <el-col :span="10" class="course-cover">
-            <img :src="course.cover" alt="">
+            <img :src="course.cover" class="img-responsive" alt="">
           </el-col>
         </el-card>
       </el-col>
@@ -98,12 +98,9 @@ export default {
 				margin-bottom 20px
 				font-size 30px
 			.info
-				font-size 20px
-				line-height 23px      
-		.course-cover
-			img
-				width 100%
-				height 100%
+				font-size 17px
+				color #475669    
+				line-height 25px
 	.sections-wrapper
 		margin-top 20px
 		padding 10px

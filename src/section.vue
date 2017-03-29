@@ -1,16 +1,40 @@
 <template>
   <div id="app4">
     <Vheader></Vheader>
-    <!-- <div class="banner-wrapper" v-if="carousel">
-      <Vbanner :carousel="carousel"></Vbanner>
-    </div> -->
-    <el-row>
+    <el-row :gutter="10">
       <el-col :lg="{span: 20, offset: 2}" class="pdf-wrapper border-1px">
       	<el-col :span="18" class="pdf-viewer">
-      		<iframe src="static/web/viewer.html?file=test.pdf" style="width:100%;height:100%;"> </iframe>
+      		<iframe :src="pdfSrc" style="width:100%;height:100%;"> </iframe>
       	</el-col>
-      	<el-col :span="6" class="pdf-info">
-      		<p>
+      	<el-col :span="6">
+          <el-row class="control shadow">
+            <el-col :span="8">
+							<el-dropdown @command="changePDFedition">
+							  <span class="el-dropdown-link">
+							    {{pdfEdition}}<i class="el-icon-caret-bottom el-icon--right"></i>
+							  </span>
+							  <el-dropdown-menu slot="dropdown">
+							    <el-dropdown-item command="doc"><i class="fa fa-file-word-o"></i>&nbsp;DOC版</el-dropdown-item>
+							    <el-dropdown-item divided command="ppt"><i class="fa fa-file-powerpoint-o"></i>&nbsp;PPT版</el-dropdown-item>
+							  </el-dropdown-menu>
+							</el-dropdown>
+            </el-col>
+            <el-col :span="9">
+              <el-dropdown @command="downloadDocument">
+                <span class="el-dropdown-link">
+                  下载文档<i class="el-icon-caret-bottom el-icon--right"></i>
+                </span>
+                <el-dropdown-menu slot="dropdown">
+                  <el-dropdown-item><i class="fa fa-file-word-o"></i>&nbsp;DOC 文档</el-dropdown-item>
+                  <el-dropdown-item divided><i class="fa fa-file-powerpoint-o"></i>&nbsp;PPT 文档</el-dropdown-item>
+                  <el-dropdown-item divided><i class="fa fa-file-pdf-o"></i>&nbsp;PDF 文档</el-dropdown-item>
+                </el-dropdown-menu>
+              </el-dropdown>
+            </el-col>
+            <el-col :span="3"><i class="fa" :class="{'fa-thumbs-up': thumbsUp, 'fa-thumbs-o-up': !thumbsUp}" @click="switchThumbsUp"></i></el-col>
+            <el-col :span="3"><i class="fa" :class="{'fa-heart': !heart, 'fa-heart-o': heart}" @click="switchHeart"></i></el-col>
+          </el-row>
+      		<p class="pdf-info shadow">
       			摘要：Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque aliquam eligendi eius reiciendis minus magnam repellat nesciunt sed aspernatur numquam qui dignissimos maxime voluptatum similique eveniet minima consequatur, esse corporis.
       		</p>
       	</el-col>
@@ -23,7 +47,6 @@
 
 <script type="text/ecmascript-6">
 import header from 'components/header/header'
-// import banner from 'components/banner/banner'
 import footer from 'components/footer/footer'
 
 // const ERR_OK = 0
@@ -31,18 +54,39 @@ import footer from 'components/footer/footer'
 export default {
   components: {
     'Vheader': header,
-    // 'Vbanner': banner,
     'Vfooter': footer
   },
   data() {
     return {
-      carousel: undefined
+      carousel: undefined,
+      pdfName: 'ppt.pdf',
+      pdfEdition: 'PPT版',
+      thumbsUp: false,
+      heart: false
     }
   },
   methods: {
     handleCurrentChange(val) {
       this.currentPage = val
       console.log(`当前页: ${val}`)
+    },
+    changePDFedition(command) {
+      this.pdfEdition = command.toUpperCase() + '版'
+      this.pdfName = `${command}.pdf`
+    },
+    downloadDocument(command) {
+      console.log('downloading')
+    },
+    switchHeart() {
+      this.heart = !this.heart
+    },
+    switchThumbsUp() {
+      this.thumbsUp = !this.thumbsUp
+    }
+  },
+  computed: {
+    pdfSrc() {
+      return `static/web/viewer.html?file=${this.pdfName}`
     }
   },
   created() {
@@ -59,17 +103,31 @@ export default {
 <style lang="stylus" rel="stylesheet/stylus">
 @import 'common/stylus/mixin'
 #app4
-	// .banner-wrapper
-	// 	margin-bottom 20px
 	.pdf-wrapper
 		margin-top 20px
 		margin-bottom 20px  
 		.pdf-viewer
-			height 700px
-		.pdf-info
-			height 700px
+			height 700px   
+		.control
 			box-sizing border-box
-			padding 40px 20px
+			height 50px
+			width 100%
+			margin-bottom 10px
+			padding 0 12px   
+			font-size 15px
+			text-align center
+			line-height 50px
+			.fa
+				display inline-block
+			.fa-heart
+				color #FF4949
+			.fa-thumbs-up
+				color #1D8CE0         
+		.pdf-info
+			box-sizing border-box
+			height 640px
+			padding 40px 10px
 			font-size 23px
+			text-align justify-all
 			background-color #fafafa
 </style>
