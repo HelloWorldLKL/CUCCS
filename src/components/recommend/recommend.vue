@@ -7,7 +7,7 @@
 	      	<div class="card-box">
 	      	  <div class="card-wrapper">
 	      	    <div class="animate-shadow card">
-	      	      <img :src="item.cover" class="card-image">
+	      	      <img :src="item.cover" class="card-image img-responsive">
 	      	      <div class="info">
 	      	        <span class="title">{{item.name}}</span>
 	      	        <span class="section-count">案例数量：{{item.section.length}}</span>
