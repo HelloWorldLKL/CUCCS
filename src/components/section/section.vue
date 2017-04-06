@@ -1,19 +1,17 @@
 <template>
-  <div class="section">
-    <a href="/section.html">
-      <div class="animate-shadow card">
-        <img :src="sectionInfo.cover" :height="imgHeight" alt="" class="img">
-        <div class="info" :style="{ height: infoHeight, 'line-height' : infoHeight }">
-          <span class="title">{{sectionInfo.name}}</span>
-        </div>
+  <div class="section" v-if="section">
+    <div class="animate-shadow card">
+      <img :src="`static/image/${section.cover}`" :height="imgHeight" alt="" class="img">
+      <div class="info" :style="{ height: infoHeight, 'line-height' : infoHeight }">
+        <span class="title">{{section.title}}</span>
       </div>
-    </a>
+    </div>
   </div>
 </template>
 <script type="text/ecmascript-6">
 export default {
   props: {
-    sectionInfo: {
+    section: {
       type: Object
     },
     infoHeight: {
@@ -21,10 +19,6 @@ export default {
     },
     imgHeight: {
       type: String
-    }
-  },
-  data() {
-    return {
     }
   }
 }

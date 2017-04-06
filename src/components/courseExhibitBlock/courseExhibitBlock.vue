@@ -2,11 +2,11 @@
   <div class="courseExhibitBlock">
     <el-row :gutter="20">
       <el-col :span="6">
-        <a href="/course.html">
+        <a :href="`/course.html?cID=${course.ID}`">
           <el-card class="sort-block" :style="{ backgroundImage: 'url(\''+ sortImgURL +'\')' }">
             <div class="mask">
-              <h3 class="title">{{course.name}}</h3>
-              <span class="section-count">案例数量：{{course.section.length}}</span>
+              <h3 class="title">{{course.title}}</h3>
+              <span class="section-count">案例数量：{{course.sectionCount}}</span>
               <p class="more-info">
                 概述：{{course.info}}
               </p>
@@ -15,12 +15,16 @@
         </a>
       </el-col>
       <el-col :span="18" class="section-wrapper">
-        <el-row :gutter="20" v-if="course.section">
-          <el-col :span="8" v-for="(item, index) in course.section.slice(0, 3)">
-            <Vsection :sectionInfo="item" infoHeight="50px" imgHeight="150px" class="section"></Vsection>
+        <el-row :gutter="20" v-if="sections">
+          <el-col :span="8" v-for="(item, index) in sections.slice(0, 3)">
+            <a :href="`/section.html?sID=${item.sectionID}`" target="_blank">
+              <Vsection :section="item" infoHeight="50px" imgHeight="150px" class="section"></Vsection>
+            </a>
           </el-col>
-          <el-col :span="8" v-for="(item, index) in course.section.slice(3, 6)">
-            <Vsection :sectionInfo="item" infoHeight="50px" imgHeight="150px" class="section"></Vsection>
+          <el-col :span="8" v-for="(item, index) in sections.slice(3, 6)">
+            <a :href="`/section.html?sID=${item.sectionID}`" target="_blank">
+              <Vsection :section="item" infoHeight="50px" imgHeight="150px" class="section"></Vsection>
+            </a>
           </el-col>
         </el-row>
       </el-col>
@@ -44,7 +48,20 @@ export default {
   },
   data() {
     return {
-      sortImgURL: 'http://edu-image.nosdn.127.net/D898E17016500A84930AF2FF06C9BF37.png?imageView&thumbnail=235y325&quality=100'
+      sortImgURL: 'http://edu-image.nosdn.127.net/D898E17016500A84930AF2FF06C9BF37.png?imageView&thumbnail=235y325&quality=100',
+      sections: undefined
+    }
+  },
+  created() {
+    this.$http.get('http://localhost:3000/api/getSourceByCourseID?cID=' + this.course.ID + '&cPage=1&pSize=6').then((response) => {
+      this.sections = response.data
+    })
+  },
+  watch: {
+    course: function() {
+      this.$http.get('http://localhost:3000/api/getSourceByCourseID?cID=' + this.course.ID + '&cPage=1&pSize=6').then((response) => {
+        this.sections = response.data
+      })
     }
   }
 }

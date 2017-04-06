@@ -3,12 +3,14 @@
     <el-row>
       <el-col :span="4" :offset="1">
         <div class="logo-wrapper">
+          <a href="/">
             <img src="http://edu-image.nosdn.127.net/B34DC36428D2D51B8EF5EE2C83CE9BF2.png?imageView&thumbnail=241y34&quality=100" alt="" class="logo">
+          </a>
         </div>
       </el-col>
       <el-col :span="6" :offset="10">
         <div class="search-wrapper">
-            <el-autocomplete v-model="searchText" :fetch-suggestions="querySearchAsync" placeholder="请输入感兴趣的课程" icon="search" @select="handleSelect"></el-autocomplete>
+            <el-autocomplete v-model="searchText" :fetch-suggestions="querySearchAsync" placeholder="请输入感兴趣的课程" :trigger-on-focus="false" @select="handleSelect" icon="search" :on-icon-click="searchCourse"></el-autocomplete>
         </div>
       </el-col>
       <el-col :span="2">
@@ -25,33 +27,28 @@
 
 
 <script type="text/ecmascript-6">
-const ERR_OK = 0
-
 export default {
+  props: {
+    courses: {
+      type: Array
+    }
+  },
   data() {
     return {
-      courseData: [],
+      coursesData: [],
       searchText: '',
-      timeout: null
+      timeout: 2,
+      searchTime: 0
     }
   },
   methods: {
-    loadAll() {
-      this.$http.get('/api/courses').then((response) => {
-        response = response.data
-        if (response.errno === ERR_OK) {
-          this.courses = response.data
-          for (let item of this.courses) {
-            let obj = {}
-            obj.value = item.name
-            this.courseData.push(obj)
-          }
-        }
-      })
-    },
     querySearchAsync(queryString, cb) {
-      var courseData = this.courseData
-      var results = queryString ? courseData.filter(this.createStateFilter(queryString)) : courseData
+      if (this.searchTime === 0) {
+        this.loadSearchData()
+      }
+      this.searchTime ++
+      var coursesData = this.coursesData
+      var results = queryString ? coursesData.filter(this.createStateFilter(queryString)) : coursesData
       clearTimeout(this.timeout)
       this.timeout = setTimeout(() => {
         cb(results)
@@ -64,10 +61,17 @@ export default {
     },
     handleSelect(item) {
       console.log(item)
+    },
+    loadSearchData() {
+      this.courses.forEach((item, index) => {
+        let obj = {}
+        obj.value = item.title
+        this.coursesData.push(obj)
+      })
+    },
+    searchCourse() {
+      window.location.href = encodeURI(encodeURI(`/sort.html?wd=${this.searchText}`))
     }
-  },
-  mounted() {
-    this.loadAll()
   }
 }
 

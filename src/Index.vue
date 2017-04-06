@@ -1,12 +1,12 @@
 <template>
   <div id="app">
-    <Vheader></Vheader>
+    <Vheader :courses="courses"></Vheader>
     <div class="banner-wrapper" v-if="carousel">
-      <Vbanner :carousel="carousel"></Vbanner>
+      <Vbanner :courseType="courseType" :carousel="carousel"></Vbanner>
     </div>
     <el-row>
       <el-col :lg="{span: 20, offset: 2}" class="recommend-wrapper border-1px">
-        <recommend v-if="courses" :courses="courses"></recommend>
+        <recommend v-if="recommendCourses" :courses="recommendCourses"></recommend>
       </el-col>
     </el-row>
     <el-row v-if="courses">
@@ -25,8 +25,6 @@ import recommend from 'components/recommend/recommend'
 import courseExhibitBlock from 'components/courseExhibitBlock/courseExhibitBlock'
 import footer from 'components/footer/footer'
 
-const ERR_OK = 0
-
 export default {
   components: {
     'Vheader': header,
@@ -37,24 +35,25 @@ export default {
   },
   data() {
     return {
+      recommendCourses: undefined,
       courses: undefined,
-      carousel: undefined
+      carousel: undefined,
+      courseType: undefined
     }
   },
   created() {
-    this.$http.get('/api/courses').then((response) => {
-      response = response.data
-      if (response.errno === ERR_OK) {
-        this.courses = response.data
-        // console.log(this.courses)
-      }
+    this.$http.get('http://localhost:3000/api/undelCourse').then((response) => {
+      this.courses = response.data
     })
-    this.$http.get('/api/carousel').then((response) => {
+    this.$http.get('http://localhost:3000/api/recommendCourse').then((response) => {
+      this.recommendCourses = response.data
+    })
+    this.$http.get('http://localhost:3000/api/carousel').then((response) => {
       response = response.data
-      if (response.errno === ERR_OK) {
-        this.carousel = response.data
-        // console.log(this.carousel)
-      }
+      this.carousel = response.data
+    })
+    this.$http.get('http://localhost:3000/api/type').then((response) => {
+      this.courseType = response.data
     })
   }
 }
