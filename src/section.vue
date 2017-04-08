@@ -27,7 +27,6 @@
                 <el-dropdown-menu slot="dropdown">
                   <a :href="`static/pdf/${section.docPath}`" target="_blank"><el-dropdown-item><i class="fa fa-file-word-o"></i>&nbsp;DOC 文档</el-dropdown-item></a>
                   <a :href="`static/pdf/${section.pptPath}`" target="_blank"><el-dropdown-item divided><i class="fa fa-file-powerpoint-o"></i>&nbsp;PPT 文档</el-dropdown-item></a>
-                  <!-- <a href="https://baidu.com"><el-dropdown-item divided><i class="fa fa-file-pdf-o"></i>&nbsp;PDF 文档</el-dropdown-item></a> -->
                 </el-dropdown-menu>
               </el-dropdown>
             </el-col>
@@ -87,7 +86,7 @@ export default {
   },
   computed: {
     pdfSrc() {
-      return `static/web/viewer.html?file=../pdf/${this.fileName}`
+      return `http://case.minipoint.cn/web/viewer.html?file=http://case.minipoint.cn/cucc/${this.fileName}`
     }
   },
   created() {
