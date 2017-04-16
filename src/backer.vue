@@ -1,14 +1,18 @@
 <template>
   <div id="app5">
-    <navbar></navbar>  
-    <el-row v-if="courses">
-      <el-col :lg="{span: 20, offset: 2}" class="course-exhibit-block-wrapper border-1px">
-        <h1>backer</h1>
-      </el-col>
-    </el-row>
-    <el-row>
-      <el-col :span="24">
-        <Vfooter></Vfooter>
+    <navbar></navbar>
+    <el-row class="content-wrapper">
+      <el-col :lg="{span: 20, offset: 2}">
+      	<el-row :gutter="20">
+	        <el-col :span="4">
+	          <div class="sidebar-wrapper">
+	            <sidebar></sidebar>
+	          </div>
+	        </el-col>
+	        <el-col :span="20">
+	          <router-view style="width: 100%;min-height:540px"></router-view>
+	        </el-col>
+        </el-row>
       </el-col>
     </el-row>
   </div>
@@ -16,36 +20,38 @@
 
 <script type="text/ecmascript-6">
 import navbar from 'components/navbar/navbar'
-import footer from 'components/footer/footer'
-
-const ERR_OK = 0
-
+import sidebar from 'components/sidebar/sidebar'
 export default {
   components: {
     'navbar': navbar,
-    'Vfooter': footer
+    'sidebar': sidebar
   },
   data() {
     return {
       courses: undefined
     }
   },
-  created() {
-    this.$http.get('/api/courses').then((response) => {
-      response = response.data
-      if (response.errno === ERR_OK) {
-        this.courses = response.data
-        // console.log(this.courses)
-      }
-    })
-  }
+  methods: {
+    handleOpen(key, keyPath) {
+      console.log(key, keyPath)
+    },
+    handleClose(key, keyPath) {
+      console.log(key, keyPath)
+    }
+  },
+  created() {}
 }
+
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus">
 @import 'common/stylus/mixin'
 #app5
-  .course-exhibit-block-wrapper
-    padding 25px 10px
-    border-1px(rgba(7, 17, 27, 0.1))
+	overflow hidden
+	.content-wrapper
+		margin-top 20px
+	  .sidebar-wrapper
+			overflow auto
+			height 540px
+			background-color #eff1f6
 </style>

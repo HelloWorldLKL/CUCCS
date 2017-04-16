@@ -1,9 +1,9 @@
 <template>
   <div class="section" v-if="section">
     <div class="animate-shadow card">
-      <img :src="`static/image/${section.cover}`" :height="imgHeight" alt="" class="img">
+      <img :src="`static/image/${section.sCover}`" :height="imgHeight" alt="" class="img">
       <div class="info" :style="{ height: infoHeight, 'line-height' : infoHeight }">
-        <span class="title">{{section.title}}</span>
+        <span class="title">{{section.sName}}</span>
       </div>
     </div>
   </div>

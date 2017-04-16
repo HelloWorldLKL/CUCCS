@@ -2,13 +2,13 @@
   <div class="courseExhibitBlock">
     <el-row :gutter="20">
       <el-col :span="6">
-        <a :href="`/course.html?cID=${course.ID}`">
+        <a :href="`/course.html?cID=${course.cID}`">
           <el-card class="sort-block" :style="{ backgroundImage: 'url(\''+ sortImgURL +'\')' }">
             <div class="mask">
-              <h3 class="title">{{course.title}}</h3>
+              <h3 class="title">{{course.cName}}</h3>
               <span class="section-count">案例数量：{{course.sectionCount}}</span>
               <p class="more-info">
-                概述：{{course.info}}
+                概述：{{course.cInfo}}
               </p>
             </div>
           </el-card>
@@ -17,12 +17,12 @@
       <el-col :span="18" class="section-wrapper">
         <el-row :gutter="20" v-if="sections">
           <el-col :span="8" v-for="(item, index) in sections.slice(0, 3)">
-            <a :href="`/section.html?sID=${item.sectionID}`" target="_blank">
+            <a :href="`/section.html?sID=${item.sID}`" target="_blank">
               <Vsection :section="item" infoHeight="50px" imgHeight="150px" class="section"></Vsection>
             </a>
           </el-col>
           <el-col :span="8" v-for="(item, index) in sections.slice(3, 6)">
-            <a :href="`/section.html?sID=${item.sectionID}`" target="_blank">
+            <a :href="`/section.html?sID=${item.sID}`" target="_blank">
               <Vsection :section="item" infoHeight="50px" imgHeight="150px" class="section"></Vsection>
             </a>
           </el-col>
@@ -53,13 +53,13 @@ export default {
     }
   },
   created() {
-    this.$http.get('http://localhost:3000/api/getSourceByCourseID?cID=' + this.course.ID + '&cPage=1&pSize=6').then((response) => {
+    this.$http.get('http://localhost:3000/api/section?cID=' + this.course.cID + '&cPage=1&pSize=6').then((response) => {
       this.sections = response.data
     })
   },
   watch: {
     course: function() {
-      this.$http.get('http://localhost:3000/api/getSourceByCourseID?cID=' + this.course.ID + '&cPage=1&pSize=6').then((response) => {
+      this.$http.get('http://localhost:3000/api/section?cID=' + this.course.cID + '&cPage=1&pSize=6').then((response) => {
         this.sections = response.data
       })
     }

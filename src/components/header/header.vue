@@ -15,9 +15,7 @@
       </el-col>
       <el-col :span="2">
         <div class="login-wrapper">
-            <a class="log-in" href="#">登陆</a>
-            |
-            <a class="sign-up" href="#">注册</a>
+            <a class="log-in" href="/login.html">登陆帐号</a>
         </div>
       </el-col>
     </el-row>
@@ -65,7 +63,7 @@ export default {
     loadSearchData() {
       this.courses.forEach((item, index) => {
         let obj = {}
-        obj.value = item.title
+        obj.value = item.cName
         this.coursesData.push(obj)
       })
     },
@@ -91,6 +89,9 @@ export default {
       >div
         width 100%
     .login-wrapper
-      padding-top 10px
+      padding-top 15px
       font-size 15px
+      & :hover
+      	color #20a0ff
+      	transition .5s
 </style>

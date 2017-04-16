@@ -5,14 +5,14 @@
       <el-col :span="Math.floor(24/courses.length)" v-for="(item, index) in courses">
       	<div class="card-box">
       	  <div class="card-wrapper">
-	      	  <a :href="`/course.html?cID=${item.ID}`">
+	      	  <a :href="`/course.html?cID=${item.cID}`">
 	      	    <div class="animate-shadow card">
-	      	      <img :src="item.cover" class="card-image img-responsive">
+	      	      <img :src="`static/image/${item.cCover}`" class="card-image img-responsive">
 	      	      <div class="info">
-	      	        <span class="title">{{item.title}}</span>
+	      	        <span class="title">{{item.cName}}</span>
 	      	        <span class="section-count">案例数量：{{item.sectionCount}}</span>
 	      	        <p class="more-info">
-	      	        	概述: {{item.info}}
+	      	        	概述: {{item.cInfo}}
 	      	        </p>
 	      	      </div>
 	      	    </div>
@@ -74,7 +74,7 @@ export default {
 						text-align center
 					.section-count
 						font-size 12px
-						color #55B929
+						color #20a0ff
 					.more-info
 						margin-top 10px
 						font-size 13px

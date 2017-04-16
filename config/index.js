@@ -9,6 +9,7 @@ module.exports = {
     course: path.resolve(__dirname, '../dist/course.html'),
     section: path.resolve(__dirname, '../dist/section.html'),
     backer: path.resolve(__dirname, '../dist/backer.html'),
+    login: path.resolve(__dirname, '../dist/login.html'),
     assetsRoot: path.resolve(__dirname, '../dist'),
     assetsSubDirectory: 'static',
     assetsPublicPath: './',

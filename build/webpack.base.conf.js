@@ -13,7 +13,8 @@ module.exports = {
     app2: './src/sort.js',
     app3: './src/course.js',
     app4: './src/section.js',
-    app5: './src/backer.js'
+    app5: './src/backer.js',
+    app6: './src/login.js'
   },
   output: {
     path: config.build.assetsRoot,

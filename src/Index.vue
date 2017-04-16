@@ -42,24 +42,23 @@ export default {
     }
   },
   created() {
-    this.$http.get('http://localhost:3000/api/undelCourse').then((response) => {
+    this.$http.get('http://localhost:3000/api/course?all=1').then((response) => {
       this.courses = response.data
     })
-    this.$http.get('http://localhost:3000/api/recommendCourse').then((response) => {
+    this.$http.get('http://localhost:3000/api/course?recommend=1').then((response) => {
       this.recommendCourses = response.data
     })
     this.$http.get('http://localhost:3000/api/carousel').then((response) => {
-      response = response.data
       this.carousel = response.data
     })
-    this.$http.get('http://localhost:3000/api/type').then((response) => {
+    this.$http.get('http://localhost:3000/api/courseType?all=0').then((response) => {
       this.courseType = response.data
     })
   }
 }
 </script>
 
-<style lang="stylus" rel="stylesheet/stylus">
+<style lang="stylus" rel="stylesheet/stylus" scoped>
 @import 'common/stylus/mixin'
 #app
   .banner-wrapper
